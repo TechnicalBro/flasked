@@ -1,0 +1,41 @@
+setuptools==18.5
+wheel==0.26.0
+
+Flask==0.11.1
+flask-jsonrpc==0.3
+MarkupSafe==0.23
+Werkzeug==0.11.11
+Jinja2==2.8
+itsdangerous==0.24
+
+# Cross domain Request Addons
+flask-cors
+
+# Database
+Flask-SQLAlchemy==2.1
+SQLAlchemy==1.0.9
+mysqlclient
+
+# Migrations for Database
+Flask-Migrate==1.6.0
+
+#deployment
+gunicorn>19.3.0
+
+# Managing Assets
+Flask-Assets==0.11
+
+# Caching
+Flask-Cache>=0.13.1
+
+# Debug toolbar
+Flask-DebugToolbar==0.10.0
+
+# Logging
+ConcurrentLogHandler==0.9.1
+
+# Requests, for polling external resources
+requests==2.8.1
+
+# Console & Command Manager
+Flask-Script
