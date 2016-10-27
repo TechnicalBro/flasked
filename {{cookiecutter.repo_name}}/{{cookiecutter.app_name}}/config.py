@@ -15,7 +15,7 @@ class BaseConfig(object):
 
     ENV = None
 
-    PROJECT = "{{cookiecutter.app_name}}"
+    PROJECT = "{{cookiecutter.app_name|title}}"
 
     PROJECT_ROOT = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
 
@@ -42,10 +42,6 @@ class BaseConfig(object):
     DATABASE_PATH = os.path.join(INSTANCE_FOLDER_PATH, DATABASE_NAME)
     SQLALCHEMY_DATABASE_URI = 'sqlite:///{0}'.format(DATABASE_PATH)
 
-    CELERY_BROKER_URL = "redis://localhost:6379/0"
-    CELERY_RESULT_BACKEND = "redis://localhost:6379/0"
-    CELERY_IMPORTS = ('portal.api.games.kongregate.feed',)
-    BROKER_URL = "redis://localhost:6379/0"
     API_URL = "http://127.0.0.1:5000"
 
 
@@ -66,11 +62,11 @@ class ProductionConfig(BaseConfig):
 
     LOGLEVEL = 'INFO'
 
-    SECRET_KEY = 'wlORTTFUWrdEWtN7srsb'
+    SECRET_KEY = ''
 
-    SQLALCHEMY_DATABASE_URI = 'mysql://gamingdbadmin:$ayFriend$5344@gamingportaldb.ces2nsc0aj7p.eu-west-1.rds.amazonaws.com/gamingdb'
+    SQLALCHEMY_DATABASE_URI = 'mysql://'
 
-    API_URL = "http://ec2-54-171-249-159.eu-west-1.compute.amazonaws.com"
+    API_URL = ""
 
 
 class TestConfig(BaseConfig):
@@ -112,7 +108,7 @@ class DevConfig(BaseConfig):
     ASSETS_DEBUG = True
     DEBUG_TB_ENABLED = True
     DEBUG_TB_INTERCEPT_REDIRECTS = True
-    CACHE_TYPE = 'redis'  # Can be "memcached", "redis", etc.
+    CACHE_TYPE = 'memcached'  # Can be "memcached", "redis", etc.
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     DATABASE_NAME = 'development.db'
     DATABASE_PATH = os.path.join(BaseConfig.PROJECT_ROOT, DATABASE_NAME)

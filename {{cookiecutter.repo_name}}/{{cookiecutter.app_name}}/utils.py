@@ -27,7 +27,7 @@ import logging
 import pprint
 from functools import wraps, update_wrapper
 
-from .exceptions import {{cookiecutter.app_name}}Error
+from .exceptions import {{cookiecutter.app_name|title}}Error
 from .compat import basestring
 
 LOGGER = logging.getLogger(__name__)
@@ -96,7 +96,7 @@ def auth_token(func):
         except PermissionError:
             LOGGER.error('Authorization failed for token %s',
                          request.environ.get('HTTP_AUTHORIZATION'))
-            raise {{cookiecutter.app_name}}Error
+            raise {{cookiecutter.app_name|title}}Error
             Error('Authorization failed')
         else:
             LOGGER.info('Successfully authenticated token')
@@ -127,7 +127,7 @@ class CerberusValidate(object):
                 return func(*args, **kwargs)
             else:
                 LOGGER.error('Failed to validate params - \n%s', v.errors)
-                raise {{cookiecutter.app_name}}Error
+                raise {{cookiecutter.app_name|title}}Error
                 Error(v.errors, 500)
 
         return func_wrapper

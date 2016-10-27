@@ -5,7 +5,7 @@ Application-wide exceptions module
 from flask_jsonrpc.exceptions import Error
 
 
-class {{cookiecutter.app_name}}Error(Error):
+class {{cookiecutter.app_name|title}}Error(Error):
     """
     Raised when the called subsystem or service layer experiences a server-side error
 

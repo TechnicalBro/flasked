@@ -9,11 +9,11 @@ from unittest import TestCase
 
 from .utils import FlaskTestCaseMixin
 
-class {{cookiecutter.app_name}}TestCase(TestCase):
+class {{cookiecutter.app_name|title}}TestCase(TestCase):
     pass
 
 
-class {{cookiecutter.app_name}}AppTestCase(FlaskTestCaseMixin, {{cookiecutter.app_name}}TestCase):
+class {{cookiecutter.app_name|title}}AppTestCase(FlaskTestCaseMixin, {{cookiecutter.app_name|title}}TestCase):
     def _create_app(self):
         raise NotImplementedError
 
@@ -21,7 +21,7 @@ class {{cookiecutter.app_name}}AppTestCase(FlaskTestCaseMixin, {{cookiecutter.ap
         pass
 
     def setUp(self):
-        super({{cookiecutter.app_name}}AppTestCase, self).setUp()
+        super({{cookiecutter.app_name|title}}AppTestCase, self).setUp()
         self.app = self._create_app()
         self.client = self.app.test_client()
         self.app_context = self.app.app_context()
@@ -38,7 +38,7 @@ class {{cookiecutter.app_name}}AppTestCase(FlaskTestCaseMixin, {{cookiecutter.ap
         self._create_fixtures()
 
     def tearDown(self):
-        super({{cookiecutter.app_name}}AppTestCase, self).tearDown()
+        super({{cookiecutter.app_name|title}}AppTestCase, self).tearDown()
         self.db.session.close()
         self.db.drop_all()
         self.app_context.pop()
