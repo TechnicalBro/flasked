@@ -4,7 +4,9 @@ flasked
 A Flask template for [cookiecutter](https://github.com/audreyr/cookiecutter)
 
 #### Use it!
+
 > $ pip install cookiecutter
+> 
 > $ cookiecutter https://github.com/TechnicalBro/flasked.git
 
 #### Features
