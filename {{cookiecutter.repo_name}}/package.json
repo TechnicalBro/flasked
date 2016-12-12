@@ -10,7 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "{{cookiecutter.full_name}}",
-  "license": "{{cookiecutter.liscense}}",
+  "license": "{{cookiecutter.license}}",
   "devDependencies": {
     "gulp": "^3.8.11",
     "gulp-clean": "^0.3.1",
