@@ -20,3 +20,8 @@ A Flask template for [cookiecutter](https://github.com/audreyr/cookiecutter)
 * Concurrent log handler, and rotating log files.
 * Faker for fake-data while testing.
 * Unit test base class for API & Application tests.
+* ReactJS Integration
+* Gulp
+* Coffee-Script, CJSX, and React for Sweet workflow!
+* Browserify for packaging your (frontend) application
+* Heroku integration to make life easier!

@@ -52,7 +52,7 @@ def main():
         name=NAME,
         version=VERSION,
         description='{{cookiecutter.short_description}}',
-        license='MIT',
+        license='{{cookiecutter.license}}',
         long_description='',
         author='{{cookiecutter.full_name}}',
         author_email='{{cookiecutter.email}}',
